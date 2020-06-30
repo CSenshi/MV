@@ -42,7 +42,6 @@ tensorflow-model-optimization
 matplotlib
 tqdm
 pillow
-mnn
 Cython
 pycocotools
 keras2onnx
