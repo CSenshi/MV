@@ -52,3 +52,4 @@ tfcoreml
 sympy
 imgaug
 imagecorruptions
+notebook

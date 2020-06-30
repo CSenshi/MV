@@ -21,3 +21,9 @@
   ```bash
   deactivate
   ```
+
+## Jupyter Notebook
+* Run Jupyter Notebook
+  ```bash
+  jupyter notebook
+  ```
