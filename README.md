@@ -10,8 +10,10 @@
   source venv/bin/activate
   ```
 
-* Install requirements
+* Install
   ```bash
+  sudo apt install python3-opencv
+  pip install Cython
   pip install -r requirements.txt
   ```
 
