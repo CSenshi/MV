@@ -1,8 +1,14 @@
 ## Download
 * Currently using submodule keras-YOLOv3-model-set
   ```bash
+  # Clone this repository
   git clone git://github.com/CSenshi/MV.git
+  
+  # Change directory to repository
   cd MV
+  
+  # Download keras submodule
+  # destination directory: $(pwd)/YOLO
   git submodule update --init --recursive
   ```
 
@@ -33,13 +39,19 @@
 ## Jupyter Notebook
 * Download Weights
   ```bash
+  # change direcotry to keras-yolo submodule
+  cd YOLO
+
   # Download Weights
-  wget -O YOLO/weights/yolov3-tiny.weights https://pjreddie.com/media/files/yolov3-tiny.weights
+  wget -O weights/yolov3-tiny.weights https://pjreddie.com/media/files/yolov3-tiny.weights
 
   # Convert to teras weights
-  python YOLO/tools/model_converter/convert.py YOLO/cfg/yolov3-tiny.cfg YOLO/weights/yolov3-tiny.weights YOLO/weights/yolov3-tiny.h5
+  python  tools/model_converter/convert.py \
+          cfg/yolov3-tiny.cfg \
+          weights/yolov3-tiny.weights \
+          weights/yolov3-tiny.h5
   ```
-  
+
 * Run Jupyter Notebook
   ```bash
   jupyter notebook
