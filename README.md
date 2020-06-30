@@ -1,3 +1,11 @@
+## Download
+* Currently using submodule keras-YOLOv3-model-set
+  ```bash
+  git clone git://github.com/CSenshi/MV.git
+  cd MV
+  git submodule update --init --recursive
+  ```
+
 ## Virtual Environment ([venv](https://docs.python.org/3/library/venv))
 
 * Create venv
