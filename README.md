@@ -31,6 +31,15 @@
   ```
 
 ## Jupyter Notebook
+* Download Weights
+  ```bash
+  # Download Weights
+  wget -O YOLO/weights/yolov3-tiny.weights https://pjreddie.com/media/files/yolov3-tiny.weights
+
+  # Convert to teras weights
+  python YOLO/tools/model_converter/convert.py YOLO/cfg/yolov3-tiny.cfg YOLO/weights/yolov3-tiny.weights YOLO/weights/yolov3-tiny.h5
+  ```
+  
 * Run Jupyter Notebook
   ```bash
   jupyter notebook
