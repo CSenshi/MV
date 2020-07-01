@@ -128,3 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 validator/rules.py
+
+# dump big load of data to ignore
+data
