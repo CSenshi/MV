@@ -1,5 +1,5 @@
 ## Download
-* Currently using submodule keras-YOLOv3-model-set
+* Currently using submodule [keras-YOLOv3-model-set](https://github.com/david8862/keras-YOLOv3-model-set)
   ```bash
   # Clone this repository
   git clone git://github.com/CSenshi/MV.git
