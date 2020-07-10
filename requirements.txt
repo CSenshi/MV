@@ -54,3 +54,4 @@ imgaug
 imagecorruptions
 notebook
 torch
+torchvision
