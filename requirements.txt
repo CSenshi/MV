@@ -53,3 +53,4 @@ sympy
 imgaug
 imagecorruptions
 notebook
+torch
