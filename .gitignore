@@ -132,3 +132,4 @@ validator/rules.py
 # dump big load of data to ignore
 data
 result_data
+tmp
