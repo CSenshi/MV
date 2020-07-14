@@ -56,3 +56,7 @@
   ```bash
   jupyter notebook
   ```
+## Error while rendering notebook on github?
+* It seems notebook rendering is problem in github. Try reloading few times, if problem still occures please open it via following link:
+
+https://nbviewer.jupyter.org/
