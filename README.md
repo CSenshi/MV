@@ -116,5 +116,13 @@ After script execution:
 # HomeWork
 As for homework I took 3 exercises to work on
 1. [Doors](detect_door_type.ipynb)
-2. [Car Category] (detect_car_type.ipynb)
-3. [Car Color] (detect_car_color.ipynb)
+2. [Car Category](detect_car_type.ipynb)
+3. [Car Color](detect_car_color.ipynb)
+
+For all of those exerises I wrote one generic script that would work on all the given problems, with slight changes. As for model I created new model class that is subclass of `nn.Module` and as for base model I used `resnet18`.
+
+  * Why Resnet?
+ ad for base model I had to choose between many models, but finally decided to choose between 3 models: Resnet, VGG, Densnet. I tried all of those model and results showed that VGG performs poorly (expected better results), so i had to throw it away. as for Densnet it is great model, but it was taking a lot of time, but model result wasn't as different as elapsed time for each model. So I choose to stay with model that takes small time (RESNET).
+ 
+  * Why 18 layers?
+  Resnet comes with 18, 34, 50, 101 and 152 layers. As results showed prediction is getting better only after 50 layers, but as it was in modeling, there is downside of time. It takes a lot of time than resnet 18, but for 34 layer it didn't act as good as i expeted. So after many tests I decided to stick with Resnet model with 18 layers, which is enough for given problems
