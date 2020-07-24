@@ -1,67 +1,67 @@
-## Download
-* Currently using submodule [keras-YOLOv3-model-set](https://github.com/david8862/keras-YOLOv3-model-set)
-  ```bash
-  # Clone this repository
-  git clone git://github.com/CSenshi/MV.git
-  
-  # Change directory to repository
-  cd MV
-  
-  # Download keras submodule
-  # destination directory: $(pwd)/YOLO
-  git submodule update --init --recursive
-  ```
+# Setup 
 
-## Virtual Environment ([venv](https://docs.python.org/3/library/venv))
+  #### Download
+  * Currently using submodule [keras-YOLOv3-model-set](https://github.com/david8862/keras-YOLOv3-model-set)
+    ```bash
+    # Clone this repository
+    git clone git://github.com/CSenshi/MV.git
 
-* Create venv
-  ```bash
-  python3 -m venv ./venv
-  ```
+    # Change directory to repository
+    cd MV
 
-* Activate venv
-  ```bash
-  source venv/bin/activate
-  ```
+    # Download keras submodule
+    # destination directory: $(pwd)/YOLO
+    git submodule update --init --recursive
+    ```
 
-* Install
-  ```bash
-  sudo apt install python3-opencv
-  pip install Cython
-  pip install -r requirements.txt
-  ```
+  #### Virtual Environment ([venv](https://docs.python.org/3/library/venv))
 
-* Deactivate venv
-  ```bash
-  deactivate
-  ```
+  * Create venv
+    ```bash
+    python3 -m venv ./venv
+    ```
 
-## Jupyter Notebook
-* Download Weights
-  ```bash
-  # change direcotry to keras-yolo submodule
-  cd YOLO
+  * Activate venv
+    ```bash
+    source venv/bin/activate
+    ```
 
-  # Download Weights
-  wget -O weights/yolov3-tiny.weights https://pjreddie.com/media/files/yolov3-tiny.weights
+  * Install
+    ```bash
+    sudo apt install python3-opencv
+    pip install Cython
+    pip install -r requirements.txt
+    ```
 
-  # Convert to teras weights
-  python  tools/model_converter/convert.py \
-          cfg/yolov3-tiny.cfg \
-          weights/yolov3-tiny.weights \
-          weights/yolov3-tiny.h5
-  ```
+  * Deactivate venv
+    ```bash
+    deactivate
+    ```
 
-* Run Jupyter Notebook
-  ```bash
-  jupyter notebook
-  ```
-## Error while rendering notebook on github?
-* It seems notebook rendering is problem in github. Try reloading few times, if problem still occures please open it via following link:
+  #### Jupyter Notebook
+  * Download Weights
+    ```bash
+    # change direcotry to keras-yolo submodule
+    cd YOLO
 
-https://nbviewer.jupyter.org/
+    # Download Weights
+    wget -O weights/yolov3-tiny.weights https://pjreddie.com/media/files/yolov3-tiny.weights
 
-## Car Detection Model
+    # Convert to teras weights
+    python  tools/model_converter/convert.py \
+            cfg/yolov3-tiny.cfg \
+            weights/yolov3-tiny.weights \
+            weights/yolov3-tiny.h5
+    ```
+
+  * Run Jupyter Notebook
+    ```bash
+    jupyter notebook
+    ```
+  #### Error while rendering notebook on github?
+  * It seems notebook rendering is problem in github. Try reloading few times, if problem still occures please open it via following link: <br>     https://nbviewer.jupyter.org/
+
+# Car Detection Model
 script [detect_car_color.ipynb](detect_car_color.ipynb) is responsible for clasifying each car's pictures as interior or exterior. 
 
 * Model used: [YOLO_np](https://github.com/david8862/keras-YOLOv3-model-set/blob/25bcf6bcc3187a6199b34dd46a00d916334ba656/yolo.py#L46)
