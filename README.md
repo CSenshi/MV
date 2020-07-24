@@ -114,3 +114,7 @@ After script execution:
 <a name="HomeWork"></a>
 
 # HomeWork
+As for homework I took 3 exercises to work on
+1. [Doors](detect_door_type.ipynb)
+2. [Car Category] (detect_car_type.ipynb)
+3. [Car Color] (detect_car_color.ipynb)
