@@ -60,3 +60,43 @@
 * It seems notebook rendering is problem in github. Try reloading few times, if problem still occures please open it via following link:
 
 https://nbviewer.jupyter.org/
+
+## Car Detection Model
+script [detect_car_color.ipynb](detect_car_color.ipynb) is responsible for clasifying each car's pictures as interior or exterior. 
+
+* Model used: [YOLO_np](https://github.com/david8862/keras-YOLOv3-model-set/blob/25bcf6bcc3187a6199b34dd46a00d916334ba656/yolo.py#L46)
+* Wrapper function used: [predict()](https://github.com/david8862/keras-YOLOv3-model-set/blob/25bcf6bcc3187a6199b34dd46a00d916334ba656/yolo.py#L122)
+
+Before running script:
+```bash
+  ...
+  ├── 45976134
+  ├── 45976135
+  │   ├── 1.jpg
+  │   ├── 2.jpg
+  │   ├── 3.jpg
+  │   ├── 4.jpg
+  │   ├── 5.jpg
+  │   ├── 6.jpg
+  │   └── 7.jpg
+  ├── 45976136
+  ...
+```
+
+After script execution:
+```bash
+...
+├── 45976134
+├── 45976135
+│   ├── exterior
+│   │   ├── 2.jpg
+│   │   ├── 5.jpg
+│   │   ├── 6.jpg
+│   │   └── 7.jpg
+│   └── interior
+│       ├── 1.jpg
+│       ├── 3.jpg
+│       └── 4.jpg
+├── 45976136
+...
+```
