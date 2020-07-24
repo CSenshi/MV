@@ -1,3 +1,10 @@
+### Table of Contents
+* **[Setup](#Setup)**
+* **[Car Classifier](#carclassifier)**
+* **[HomeWork](#HomeWork)**
+
+<a name="Setup"></a>
+
 # Setup 
 
   #### Download
@@ -61,7 +68,9 @@
   #### Error while rendering notebook on github?
   * It seems notebook rendering is problem in github. Try reloading few times, if problem still occures please open it via following link: <br>     https://nbviewer.jupyter.org/
 
-# Car Detection Model
+<a name="carclassifier"></a>
+
+# Car Classifier
 script [detect_car_color.ipynb](detect_car_color.ipynb) is responsible for clasifying each car's pictures as interior or exterior. 
 
 * Model used: [YOLO_np](https://github.com/david8862/keras-YOLOv3-model-set/blob/25bcf6bcc3187a6199b34dd46a00d916334ba656/yolo.py#L46)
@@ -100,3 +109,8 @@ After script execution:
 ├── 45976136
 ...
 ```
+
+
+<a name="HomeWork"></a>
+
+# HomeWork
