@@ -121,6 +121,7 @@ As for homework I took 3 exercises to work on
 
 For all of those exerises I wrote one generic script that would work on all the given problems, with slight changes. As for model I created new model class that is subclass of `nn.Module` and as for base model I used `resnet18`.
 
+### Model
   * Why Resnet?
   
     As for base model I had to choose between many models, but finally decided to choose between 3 models: Resnet, VGG, Densnet. I tried all of those model and results showed that VGG performs poorly (expected better results), so i had to throw it away. as for Densnet it is great model, but it was taking a lot of time, but model result wasn't as different as elapsed time for each model. So I choose to stay with model that takes small time (RESNET).
@@ -128,3 +129,15 @@ For all of those exerises I wrote one generic script that would work on all the 
   * Why 18 layers?
   
     Resnet comes with 18, 34, 50, 101 and 152 layers. As results showed prediction is getting better only after 50 layers, but as it was in modeling, there is downside of time. It takes a lot of time than resnet 18, but for 34 layer it didn't act as good as i expeted. So after many tests I decided to stick with Resnet model with 18 layers, which is enough for given problems
+
+### Loss
+  As for loss function I used `torch.nn.CrossEntropyLoss()`, This criterion combines `nn.LogSoftmax()` and `nn.NLLLoss()` in one single class (softmax is a MUST for this problem because we are having problem with multiple classes). 
+
+### Optimizers
+  * Gradient 
+  
+    for gradient descent I used Stochastic Gradient Descent (SGD) from `torch.optim`. so if you use a typical Gradient Descent optimization technique on big data(samples), you will have to use all of the samples for completing one iteration while performing the Gradient Descent, and it has to be done for every iteration until the minima is reached. Hence, it becomes computationally very expensive to perform. In SGD, it uses only a single sample, i.e., a batch size of one, to perform each iteration. The sample is randomly shuffled and selected for performing the iteration.
+    
+  * Scheduler
+  
+    `torch.optim.lr_scheduler` provides several methods to adjust the learning rate based on the number of epochs.
